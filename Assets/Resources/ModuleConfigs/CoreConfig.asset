@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc46cb384c48fc4aa7a91c6fc9ad04a, type: 3}
+  m_Name: CoreConfig
+  m_EditorClassIdentifier: 
+  _roomHierarchy: {fileID: 7275698112358826041, guid: 80aff1cf1a37dc340bbbfb135c9cc080, type: 3}
+  _player: {fileID: 1128156039576113893, guid: 67210a876f7eaaf44b94c1bbe9dc44e2, type: 3}
