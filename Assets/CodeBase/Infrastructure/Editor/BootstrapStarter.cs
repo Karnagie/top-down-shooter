@@ -1,6 +1,5 @@
 ﻿using CodeBase.Infrastructure.Scenes;
 using Cysharp.Threading.Tasks;
-using NaughtyAttributes;
 using UnityEngine;
 using Zenject;
 

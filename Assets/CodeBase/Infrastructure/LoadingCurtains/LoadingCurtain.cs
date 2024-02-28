@@ -1,7 +1,5 @@
 ﻿using CodeBase.Infrastructure.Assets;
-using CodeBase.Infrastructure.Scenes;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace CodeBase.Infrastructure.LoadingCurtains
 {

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
-using CodeBase.Infrastructure.Assets;
 using CodeBase.Modules.CoreModule.Creatures;
 using CodeBase.Modules.CoreModule.World;
 using Cysharp.Threading.Tasks;

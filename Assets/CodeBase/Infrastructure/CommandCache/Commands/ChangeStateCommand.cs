@@ -1,7 +1,5 @@
-﻿using System;
-using CodeBase.Infrastructure.CommandCache.Commands.Args;
+﻿using CodeBase.Infrastructure.CommandCache.Commands.Args;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.StateMachines;
 using CodeBase.Infrastructure.StateMachines.Game.States.Types;
 
 namespace CodeBase.Infrastructure.CommandCache.Commands

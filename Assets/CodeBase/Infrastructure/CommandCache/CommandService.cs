@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using CodeBase.Infrastructure.CommandCache.SaveLoad;
+﻿using CodeBase.Infrastructure.CommandCache.SaveLoad;
 
 namespace CodeBase.Infrastructure.CommandCache
 {

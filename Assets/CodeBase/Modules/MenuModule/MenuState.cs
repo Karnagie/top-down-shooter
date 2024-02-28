@@ -2,7 +2,6 @@
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.StateMachines.Game.States.Types;
 using Cysharp.Threading.Tasks;
-using DG.Tweening;
 
 namespace CodeBase.Modules.MenuModule
 {

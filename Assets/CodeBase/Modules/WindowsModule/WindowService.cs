@@ -1,5 +1,4 @@
 ﻿using CodeBase.Infrastructure.Assets;
-using CodeBase.Modules.MenuModule;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using CodeBase.Modules.InputModule;
+﻿using CodeBase.Modules.InputModule;
 using UnityEngine;
 using Zenject;
 
