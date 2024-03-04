@@ -9,8 +9,8 @@ namespace CodeBase.Modules.CoreModule
     {
         private readonly ILogService _logger;
         private readonly ILoadingCurtain _loadingCurtain;
-
         private readonly CoreFacade _coreFacade;
+        
         public CoreState(
             ILogService logger, 
             ILoadingCurtain loadingCurtain, 
@@ -23,19 +23,18 @@ namespace CodeBase.Modules.CoreModule
         
         public async UniTaskVoid Enter()
         {
-            _logger.Log($"{nameof(CoreState)} entered");
+            _logger.Log($"{nameof(CoreState)} entered", LogDefinition.GameState);
             await _loadingCurtain.Show();
             await _coreFacade.Initialize();
-            await _loadingCurtain.Hide();
+            
             _coreFacade.Run();
         }
 
         public async UniTask Exit()
         {
             await _loadingCurtain.Show();
-            
             _coreFacade.Dispose();
-            _logger.Log($"{nameof(CoreState)} exited");
+            _logger.Log($"{nameof(CoreState)} exited", LogDefinition.GameState);
         }
     }
 }

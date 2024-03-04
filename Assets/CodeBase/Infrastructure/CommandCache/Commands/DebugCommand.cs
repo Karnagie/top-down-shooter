@@ -22,7 +22,7 @@ namespace CodeBase.Infrastructure.CommandCache.Commands
 
         protected override void PerformInternal()
         {
-            _logService.Log(LogValue);
+            _logService.Log(LogValue, LogDefinition.Default);
         }
 
         [Serializable]

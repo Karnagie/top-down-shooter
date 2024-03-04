@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Modules.CoreModule.World
 {
-    public class WorldService
+    public class WorldService : ILoadableService
     {
         private IAssetProvider _assetProvider;
         private CoreConfig _coreConfig;

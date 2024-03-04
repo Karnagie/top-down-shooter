@@ -9,9 +9,12 @@ namespace CodeBase.Modules.CoreModule.Creatures
             //todo enable all IEnableable components
         }
 
+        public Transform Transform => transform;
+
         public void Dispose()
         {
-            Object.Destroy(gameObject);
+            if(gameObject != null)
+                Object.Destroy(gameObject);
         }
     }
 }

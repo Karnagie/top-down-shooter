@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule
 {
-    [CreateAssetMenu(fileName = "CoreConfig ", menuName = "ModuleConfigs/CoreConfig ", order = 0)]
+    [CreateAssetMenu(fileName = nameof(CoreConfig), menuName = "ModuleConfigs/CoreConfig", order = 0)]
     public class CoreConfig : ScriptableObject
     {
         [SerializeField] private RoomHierarchy _roomHierarchy;

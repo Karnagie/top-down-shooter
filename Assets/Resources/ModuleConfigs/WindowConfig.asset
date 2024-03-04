@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: WindowConfig
   m_EditorClassIdentifier: 
   _menu: {fileID: 144287001716871943, guid: 1e127780abecfcc44b3191616434ceac, type: 3}
+  _devCoreHierarchy: {fileID: 87145915567233393, guid: 0e9b2230df49c4d4bb9de631aa2d91ad, type: 3}

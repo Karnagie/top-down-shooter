@@ -40,6 +40,14 @@ namespace CodeBase.Infrastructure.CommandCache
             
             return cacheCommand;
         }
+        
+        public T Create<T, TArgs>() where T : CacheCommand<TArgs, TServices>, new() where TArgs : new()
+        {
+            var cacheCommand = _factory.Create<T, TArgs, TServices>(new TArgs(), _serviceHolder);
+            _saveLoader.Save(cacheCommand);
+            
+            return cacheCommand;
+        }
 
         public void TryRemove(ICacheCommand command)
             => _service.TryRemove(command);

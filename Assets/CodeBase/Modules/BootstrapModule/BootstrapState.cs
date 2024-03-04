@@ -47,7 +47,7 @@ namespace CodeBase.Modules.BootstrapModule
 
         public async UniTaskVoid Enter()
         {
-            _logger.Log($"{nameof(BootstrapState)} entered");
+            _logger.Log($"{nameof(BootstrapState)} entered", LogDefinition.GameState);
 #if UNITY_EDITOR
             _editorStaticDataService.StartedFromBootstrap = true;
 #endif
@@ -59,7 +59,7 @@ namespace CodeBase.Modules.BootstrapModule
 
         public UniTask Exit()
         {
-            _logger.Log($"{nameof(BootstrapState)} exited");
+            _logger.Log($"{nameof(BootstrapState)} exited", LogDefinition.GameState);
             return UniTask.CompletedTask;
         }
     }

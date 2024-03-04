@@ -1,37 +1,66 @@
 ﻿using System;
+using System.Threading.Tasks;
+using CodeBase.Infrastructure.Scenes;
+using CodeBase.Infrastructure.StateMachines.Game;
 using CodeBase.Modules.CoreModule.Creatures;
+using CodeBase.Modules.CoreModule.StateMachine;
 using CodeBase.Modules.CoreModule.World;
+using CodeBase.Modules.InputModule;
+using CodeBase.Modules.WindowsModule;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule
 {
     public class CoreFacade : IDisposable
     {
-        private WorldService _worldService;
-        private CreatureService _creatureService;
+        private StateHolder<IExitableCoreState> _stateHolder;
+        private CoreStateMachine _coreStateMachine;
+        
+        private IWindowService _windowService;
+        private IPanel _coreHierarchy;
+        private ISceneRootProvider _rootProvider;
+        private ISceneLoader _sceneLoader;
+        private ServiceHandler _serviceHandler;
+        private IInputService _inputService;
 
         public CoreFacade(
-            WorldService worldService, 
-            CreatureService creatureService)
+            StateHolder<IExitableCoreState> stateHolder,
+            CoreStateMachine coreStateMachine, 
+            IWindowService windowService,
+            ISceneRootProvider rootProvider, 
+            ISceneLoader sceneLoader,
+            ServiceHandler serviceHandler,
+            IInputService inputService)
         {
-            _worldService = worldService;
-            _creatureService = creatureService;
+            _inputService = inputService;
+            _serviceHandler = serviceHandler;
+            _rootProvider = rootProvider;
+            _sceneLoader = sceneLoader;
+            _coreStateMachine = coreStateMachine;
+            _windowService = windowService;
+            _stateHolder = stateHolder;
         }
 
         public async UniTask Initialize()
         {
-            await _worldService.Load();
-            await _creatureService.Load();
+            await _sceneLoader.Load(SceneDefinition.Core);
+            _coreStateMachine.Initialize(_stateHolder);
+
+            await _serviceHandler.LoadAll();
+            
+            _coreHierarchy = await _windowService.LoadDevCoreUi(_rootProvider.Root);
+            _coreHierarchy.Initialize();
         }
 
         public void Run()
         {
-            _creatureService.Run();
+            _coreStateMachine.Enter<InitializeState>();
         }
 
         public void Dispose()
         {
-            _creatureService.Dispose();
+            _serviceHandler.Dispose();
         }
     }
 }

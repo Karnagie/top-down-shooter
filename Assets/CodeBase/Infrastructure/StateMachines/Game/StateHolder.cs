@@ -4,12 +4,12 @@ using CodeBase.Infrastructure.Services;
 
 namespace CodeBase.Infrastructure.StateMachines.Game
 {
-    public class GameStateHolder<TState> : IStateHolder<TState>
+    public class StateHolder<TState> : IStateHolder<TState>
     {
         private Dictionary<Type, TState> _states = new();
         private ILogService _log;
 
-        public GameStateHolder(List<TState> states, ILogService log)
+        public StateHolder(List<TState> states, ILogService log)
         {
             _log = log;
             foreach (var state in states)

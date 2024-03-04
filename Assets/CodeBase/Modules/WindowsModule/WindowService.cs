@@ -19,5 +19,10 @@ namespace CodeBase.Modules.WindowsModule
         {
             return await _assetProvider.Instantiate(_windowConfig.Menu, parent);
         }
+
+        public async UniTask<IPanel> LoadDevCoreUi(Transform parent)
+        {
+            return await _assetProvider.Instantiate(_windowConfig.DevCore, parent);
+        }
     }
 }

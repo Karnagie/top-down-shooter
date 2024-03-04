@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace CodeBase.Infrastructure.StateMachines
 {
@@ -18,8 +19,8 @@ namespace CodeBase.Infrastructure.StateMachines
                 await _currentState.Exit();
             
             var newState = _stateHolder.GetStateByType<TEnterState>();
-            newState.Enter();
             _currentState = newState;
+            newState.Enter();
         }
         
         public async UniTaskVoid Enter<TEnterState, TArgs>(TArgs args) where TEnterState : IStateWithArgs<TArgs>, TState
@@ -28,8 +29,8 @@ namespace CodeBase.Infrastructure.StateMachines
                 await _currentState.Exit();
             
             var newState = _stateHolder.GetStateByType<TEnterState, TArgs>();
-            newState.Enter(args);
             _currentState = newState;
+            newState.Enter(args);
         }
     }
 }

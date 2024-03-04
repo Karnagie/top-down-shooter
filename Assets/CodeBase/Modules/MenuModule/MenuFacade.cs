@@ -29,7 +29,7 @@ namespace CodeBase.Modules.MenuModule
 
         public async UniTask Initialize()
         {
-            _log.Log($"Initializing menu");
+            _log.Log($"Initializing menu", LogDefinition.GameState);
             await _sceneLoader.Load(SceneDefinition.MainMenu);
             _menuHierarchy = await _windowService.LoadMainUi(_rootProvider.Root);
             _menuHierarchy.Initialize();
@@ -37,7 +37,7 @@ namespace CodeBase.Modules.MenuModule
 
         public void Run()
         {
-            _log.Log($"Start menu");
+            _log.Log($"Start menu", LogDefinition.GameState);
             _menuHierarchy.Show();
         }
 

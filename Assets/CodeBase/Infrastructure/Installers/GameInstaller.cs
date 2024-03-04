@@ -5,6 +5,7 @@ using CodeBase.Infrastructure.Editor;
 using CodeBase.Infrastructure.LoadingCurtains;
 using CodeBase.Infrastructure.Scenes;
 using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.Services.AsyncOperations;
 using CodeBase.Infrastructure.StateMachines;
 using CodeBase.Infrastructure.StateMachines.Game;
 using CodeBase.Infrastructure.StateMachines.Game.States.Types;
@@ -22,6 +23,7 @@ namespace CodeBase.Infrastructure.Installers
             Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
             Container.Bind<ISceneRootProvider>().To<SceneRootProvider>().AsSingle();
             Container.Bind<IEditorStaticDataService>().To<EditorStaticDataService>().AsSingle();
+            Container.Bind<AsyncOperationsService>().AsSingle();
 
             BindGameStateMachine();
             
@@ -30,7 +32,7 @@ namespace CodeBase.Infrastructure.Installers
 
         private void BindGameStateMachine()
         {
-            Container.Bind<IStateHolder<IExitableGameState>>().To<GameStateHolder<IExitableGameState>>().AsSingle();
+            Container.Bind<IStateHolder<IExitableGameState>>().To<StateHolder<IExitableGameState>>().AsSingle();
             Container.Bind<GameStateMachine>().AsSingle();
         }
 

@@ -23,7 +23,7 @@ namespace CodeBase.Modules.MenuModule
         
         public async UniTaskVoid Enter()
         {
-            _logger.Log($"{nameof(MenuState)} entered");
+            _logger.Log($"{nameof(MenuState)} entered", LogDefinition.GameState);
             await _loadingCurtain.Show();
             await _menuFacade.Initialize();
             await _loadingCurtain.Hide();
@@ -35,7 +35,7 @@ namespace CodeBase.Modules.MenuModule
             await _loadingCurtain.Show();
             
             _menuFacade.Dispose();
-            _logger.Log($"{nameof(MenuState)} exited");
+            _logger.Log($"{nameof(MenuState)} exited", LogDefinition.GameState);
         }
     }
 }
