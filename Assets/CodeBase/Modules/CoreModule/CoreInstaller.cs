@@ -2,6 +2,9 @@
 using CodeBase.Infrastructure.StateMachines.Game;
 using CodeBase.Modules.CoreModule.Creatures;
 using CodeBase.Modules.CoreModule.Services;
+using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
+using CodeBase.Modules.CoreModule.Services.Physic;
+using CodeBase.Modules.CoreModule.Services.Ticking;
 using CodeBase.Modules.CoreModule.StateMachine;
 using CodeBase.Modules.CoreModule.World;
 using CodeBase.Modules.MenuModule;
@@ -35,6 +38,9 @@ namespace CodeBase.Modules.CoreModule
             Container.Bind<CoreServiceHolder>().AsSingle();
             Container.Bind<ICommandService<CoreServiceHolder>>()
                 .To<NotSaveCommandService<CoreServiceHolder>>().AsSingle();
+            Container.BindInterfacesTo<TickService>().AsSingle();
+            Container.Bind<LinkService>().AsSingle();
+            Container.Bind<PhysicService>().AsSingle();
             
             Container.BindInterfacesTo<InitializeState>().AsSingle();
             Container.BindInterfacesTo<RunState>().AsSingle();

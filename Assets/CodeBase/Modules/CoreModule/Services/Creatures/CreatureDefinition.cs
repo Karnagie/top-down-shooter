@@ -3,6 +3,7 @@
     public enum CreatureDefinition
     {
         None,
-        Player
+        Player,
+        Enemy
     }
 }

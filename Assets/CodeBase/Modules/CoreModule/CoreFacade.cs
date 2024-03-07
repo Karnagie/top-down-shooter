@@ -22,7 +22,6 @@ namespace CodeBase.Modules.CoreModule
         private ISceneRootProvider _rootProvider;
         private ISceneLoader _sceneLoader;
         private ServiceHandler _serviceHandler;
-        private IInputService _inputService;
 
         public CoreFacade(
             StateHolder<IExitableCoreState> stateHolder,
@@ -33,7 +32,6 @@ namespace CodeBase.Modules.CoreModule
             ServiceHandler serviceHandler,
             IInputService inputService)
         {
-            _inputService = inputService;
             _serviceHandler = serviceHandler;
             _rootProvider = rootProvider;
             _sceneLoader = sceneLoader;

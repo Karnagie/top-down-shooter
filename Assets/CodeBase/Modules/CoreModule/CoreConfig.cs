@@ -10,8 +10,10 @@ namespace CodeBase.Modules.CoreModule
         [SerializeField] private RoomHierarchy _roomHierarchy;
 
         [SerializeField] private Creature _player;
+        [SerializeField] private Creature _enemy;
 
         public RoomHierarchy Room => _roomHierarchy;
         public Creature Player => _player;
+        public Creature Enemy => _enemy;
     }
 }

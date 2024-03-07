@@ -1,4 +1,5 @@
-﻿using CodeBase.Infrastructure.Assets;
+﻿using System;
+using CodeBase.Infrastructure.Assets;
 using CodeBase.Infrastructure.Scenes;
 using Cysharp.Threading.Tasks;
 
@@ -20,9 +21,17 @@ namespace CodeBase.Modules.CoreModule.Creatures
             _assetProvider = assetProvider;
         }
         
-        public async UniTask<ICreature> Create(CreatureDefinition player)
+        public async UniTask<ICreature> Create(CreatureDefinition definition)
         {
-            return await _assetProvider.Instantiate(_config.Player, _sceneRootProvider.Root);
+            switch (definition)
+            {
+                case CreatureDefinition.Player:
+                    return await _assetProvider.Instantiate(_config.Player, _sceneRootProvider.Root);
+                case CreatureDefinition.Enemy:
+                    return await _assetProvider.Instantiate(_config.Enemy, _sceneRootProvider.Root);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(definition), definition, null);
+            }
         }
     }
 }

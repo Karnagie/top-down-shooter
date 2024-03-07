@@ -5,7 +5,7 @@ namespace CodeBase.Modules.CoreModule
 {
     public interface ICameraService
     {
-        UniTask MoveTo(ICreature creature);
+        UniTask FollowTo(ICreature creature);
     }
 
     public interface ILoadableService

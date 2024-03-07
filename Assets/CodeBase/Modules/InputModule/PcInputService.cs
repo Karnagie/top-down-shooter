@@ -12,7 +12,7 @@ namespace CodeBase.Modules.InputModule
             _enable = enable;
         }
 
-        public Vector2 MoveDirection => GetMoveDirection();
+        public Vector2 MoveDirection => GetMoveDirection().normalized;
 
         private Vector2 GetMoveDirection()
         {

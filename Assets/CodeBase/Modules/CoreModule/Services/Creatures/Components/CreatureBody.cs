@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
+using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule.Creatures.Components
 {
-    public class CreatureBody : MonoBehaviour, ICreatureBody
+    public class CreatureBody : CoreComponent, ICreatureBody
     {
         [SerializeField] private float _speed = 1;
         [SerializeField] private Transform _body;

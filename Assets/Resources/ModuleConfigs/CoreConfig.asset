@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomHierarchy: {fileID: 7275698112358826041, guid: 80aff1cf1a37dc340bbbfb135c9cc080, type: 3}
   _player: {fileID: 1128156039576113893, guid: 67210a876f7eaaf44b94c1bbe9dc44e2, type: 3}
+  _enemy: {fileID: 445341523625759602, guid: b1b381e35ae568b4e8882b6800b0c09d, type: 3}

@@ -15,7 +15,7 @@ namespace CodeBase.Modules.CoreModule
         private readonly ServiceHandler _serviceHandler;
         private readonly ILoadingCurtain _loadingCurtain;
         private readonly IInputService _inputService;
-        private AsyncOperationsService _asyncOperationsService;
+        private readonly AsyncOperationsService _asyncOperationsService;
 
         public InitializeState(
             ICameraService cameraService, 
@@ -41,12 +41,12 @@ namespace CodeBase.Modules.CoreModule
             _inputService.SetEnable(false);
             
             await _loadingCurtain.Show();
-
+            
             await _serviceHandler.PrewarmAll();
 
             await _loadingCurtain.Hide();
             
-            await _cameraService.MoveTo(_creatureService.Player);
+            await _cameraService.FollowTo(_creatureService.Player);
 
             _coreStateMachine.Enter<RunState>();
         }

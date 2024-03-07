@@ -1,15 +1,49 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using CodeBase.Modules.CoreModule.Creatures.Components;
+using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
+using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Modules.CoreModule.Creatures
 {
-    public class Creature : MonoBehaviour, ICreature
+    public class Creature : CoreComponent, ICreature
     {
-        public void Enable()
-        {
-            //todo enable all IEnableable components
-        }
+        [SerializeField] private string _name;
+
+        private Vector3? _startPosition;
+        private IEnumerable<IEnableable> _enumerable;
+
+        public string Name => _name;
 
         public Transform Transform => transform;
+
+        [Inject]
+        private void Construct(IEnumerable<IEnableable> enableables)
+        {
+            _enumerable = enableables;
+        }
+
+        public void Reset()
+        {
+            _startPosition ??= transform.position;
+            transform.position = _startPosition.Value;
+        }
+
+        public void Enable()
+        {
+            foreach (var enableable in _enumerable)
+            {
+                enableable.Enable();
+            }
+        }
+
+        public void Disable()
+        {
+            foreach (var enableable in _enumerable)
+            {
+                enableable.Disable();
+            }
+        }
 
         public void Dispose()
         {

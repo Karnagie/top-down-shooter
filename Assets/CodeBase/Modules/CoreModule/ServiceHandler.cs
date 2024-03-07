@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using CodeBase.Modules.InputModule;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -12,12 +13,15 @@ namespace CodeBase.Modules.CoreModule
         private IEnumerable<ILoadableService> _loadableServices;
         private IEnumerable<ICoreDisposable> _coreDisposable;
         private IEnumerable<IPrewarmService> _prewarmServices;
+        private IEnumerable<IRunService> _runServices;
 
         public ServiceHandler(
             IEnumerable<ILoadableService> loadableServices,
             IEnumerable<ICoreDisposable> coreDisposable,
-            IEnumerable<IPrewarmService> prewarmServices)
+            IEnumerable<IPrewarmService> prewarmServices,
+            IEnumerable<IRunService> runServices)
         {
+            _runServices = runServices;
             _prewarmServices = prewarmServices;
             _coreDisposable = coreDisposable;
             _loadableServices = loadableServices;
@@ -28,6 +32,22 @@ namespace CodeBase.Modules.CoreModule
             foreach (var loadableService in _loadableServices)
             {
                 await loadableService.Load();
+            }
+        }
+        
+        public void Run()
+        {
+            foreach (var runService in _runServices)
+            {
+                runService.Run();
+            }
+        }
+
+        public void End()
+        {
+            foreach (var runService in _runServices)
+            {
+                runService.Disable();
             }
         }
 

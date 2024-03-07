@@ -30,7 +30,7 @@ namespace CodeBase.Modules.CoreModule
             _assetProvider = assetProvider;
         }
         
-        public async UniTask MoveTo(ICreature creature)
+        public async UniTask FollowTo(ICreature creature)
         {
             using var token = _asyncOperationsService.CreateCancellationToken(CancellationDefinition.Core);
             
@@ -39,6 +39,7 @@ namespace CodeBase.Modules.CoreModule
                     creature.Transform.position.y, 
                     _camera.transform.position.z), _cameraConfig.StartShowTime)
                 .CompleteWithCancellation(token.Token);
+            _camera.transform.SetParent(creature.Transform);
         }
 
         public async UniTask Load()
@@ -55,6 +56,7 @@ namespace CodeBase.Modules.CoreModule
 
         private void ResetPosition()
         {
+            _camera.transform.SetParent(_rootProvider.Root);
             _camera.transform.position =
                 new Vector3(_cameraConfig.StartOffset.x, _cameraConfig.StartOffset.y, _camera.transform.position.z);
         }
