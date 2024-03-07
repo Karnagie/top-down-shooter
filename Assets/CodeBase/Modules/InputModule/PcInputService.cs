@@ -1,5 +1,4 @@
-﻿using CodeBase.Modules.CoreModule;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.Modules.InputModule
 {

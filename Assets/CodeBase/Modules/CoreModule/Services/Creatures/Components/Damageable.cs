@@ -1,9 +1,8 @@
 ﻿using CodeBase.Infrastructure.Services;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
-using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Modules.CoreModule.Creatures.Components
+namespace CodeBase.Modules.CoreModule.Services.Creatures.Components
 {
     public class Damageable : CoreComponent, IDamageable
     {

@@ -1,7 +1,7 @@
 ﻿using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using UnityEngine;
 
-namespace CodeBase.Modules.CoreModule.Creatures.Components
+namespace CodeBase.Modules.CoreModule.Services.Creatures.Components
 {
     public class DamageTimer : CoreComponent, IDamageReady
     {

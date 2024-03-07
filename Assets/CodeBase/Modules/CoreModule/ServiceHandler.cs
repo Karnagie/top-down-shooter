@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using CodeBase.Modules.CoreModule.Services.Camera;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
-using CodeBase.Modules.InputModule;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule
 {

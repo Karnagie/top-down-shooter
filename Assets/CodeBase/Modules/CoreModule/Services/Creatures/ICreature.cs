@@ -1,8 +1,6 @@
-﻿using System;
-using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace CodeBase.Modules.CoreModule.Creatures
+namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public interface ICreature
     {

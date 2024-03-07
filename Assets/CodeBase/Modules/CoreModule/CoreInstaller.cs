@@ -1,12 +1,13 @@
 ﻿using CodeBase.Infrastructure.CommandCache;
 using CodeBase.Infrastructure.StateMachines.Game;
-using CodeBase.Modules.CoreModule.Creatures;
-using CodeBase.Modules.CoreModule.Services;
+using CodeBase.Modules.CoreModule.Services.Camera;
+using CodeBase.Modules.CoreModule.Services.CommandService;
+using CodeBase.Modules.CoreModule.Services.Creatures;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using CodeBase.Modules.CoreModule.Services.Physic;
 using CodeBase.Modules.CoreModule.Services.Ticking;
+using CodeBase.Modules.CoreModule.Services.World;
 using CodeBase.Modules.CoreModule.StateMachine;
-using CodeBase.Modules.CoreModule.World;
 using CodeBase.Modules.MenuModule;
 using UnityEngine;
 using Zenject;

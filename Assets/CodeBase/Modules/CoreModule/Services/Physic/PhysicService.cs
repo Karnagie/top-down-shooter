@@ -1,8 +1,5 @@
 ﻿using System.Collections.Generic;
-using CodeBase.Modules.CoreModule.Creatures;
-using CodeBase.Modules.CoreModule.Creatures.Components;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
-using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule.Services.Physic
 {

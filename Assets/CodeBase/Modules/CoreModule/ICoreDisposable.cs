@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodeBase.Modules.CoreModule
+﻿namespace CodeBase.Modules.CoreModule
 {
     public interface ICoreDisposable
     {

@@ -1,10 +1,8 @@
-﻿using CodeBase.Infrastructure.LoadingCurtains;
-using CodeBase.Infrastructure.Services;
+﻿using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.Services.AsyncOperations;
 using CodeBase.Infrastructure.StateMachines.Game;
 using CodeBase.Infrastructure.StateMachines.Game.States.Types;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule
 {

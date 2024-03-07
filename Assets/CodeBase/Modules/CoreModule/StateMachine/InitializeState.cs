@@ -1,11 +1,11 @@
 ﻿using CodeBase.Infrastructure.LoadingCurtains;
 using CodeBase.Infrastructure.Services.AsyncOperations;
-using CodeBase.Modules.CoreModule.Creatures;
-using CodeBase.Modules.CoreModule.StateMachine;
+using CodeBase.Modules.CoreModule.Services.Camera;
+using CodeBase.Modules.CoreModule.Services.Creatures;
 using CodeBase.Modules.InputModule;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Modules.CoreModule
+namespace CodeBase.Modules.CoreModule.StateMachine
 {
     public class InitializeState : ICoreState
     {

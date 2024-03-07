@@ -1,13 +1,12 @@
-﻿using System.Threading.Tasks;
-using CodeBase.Infrastructure.Assets;
+﻿using CodeBase.Infrastructure.Assets;
 using CodeBase.Infrastructure.Scenes;
 using CodeBase.Infrastructure.Services.AsyncOperations;
-using CodeBase.Modules.CoreModule.Creatures;
+using CodeBase.Modules.CoreModule.Services.Creatures;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
-namespace CodeBase.Modules.CoreModule
+namespace CodeBase.Modules.CoreModule.Services.Camera
 {
     public class CameraService : ICameraService, ILoadableService, IPrewarmService
     {
@@ -16,7 +15,7 @@ namespace CodeBase.Modules.CoreModule
         private readonly ISceneRootProvider _rootProvider;
         private readonly CameraConfig _cameraConfig;
 
-        private Camera _camera;
+        private UnityEngine.Camera _camera;
 
         public CameraService(
             AsyncOperationsService asyncOperationsService, 

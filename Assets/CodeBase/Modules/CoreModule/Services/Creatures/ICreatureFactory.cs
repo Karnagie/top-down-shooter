@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Modules.CoreModule.Creatures
+namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public interface ICreatureFactory
     {

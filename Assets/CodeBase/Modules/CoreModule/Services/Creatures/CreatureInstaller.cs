@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using CodeBase.Modules.CoreModule.Creatures.Components;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Modules.CoreModule.Creatures
+namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public class CreatureInstaller : MonoInstaller, IInitializable
     {

@@ -1,5 +1,5 @@
-﻿using CodeBase.Modules.CoreModule.Creatures;
-using CodeBase.Modules.CoreModule.World;
+﻿using CodeBase.Modules.CoreModule.Services.Creatures;
+using CodeBase.Modules.CoreModule.Services.World;
 using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule

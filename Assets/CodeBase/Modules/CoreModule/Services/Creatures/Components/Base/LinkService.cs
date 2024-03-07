@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CodeBase.Modules.CoreModule.Creatures.Components;
 
 namespace CodeBase.Modules.CoreModule.Services.Creatures.Components.Base
 {

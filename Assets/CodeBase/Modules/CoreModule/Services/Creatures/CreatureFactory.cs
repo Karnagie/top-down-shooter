@@ -3,7 +3,7 @@ using CodeBase.Infrastructure.Assets;
 using CodeBase.Infrastructure.Scenes;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Modules.CoreModule.Creatures
+namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public class CreatureFactory : ICreatureFactory
     {

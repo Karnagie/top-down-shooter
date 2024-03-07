@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using CodeBase.Modules.CoreModule.Services.Camera;
 using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace CodeBase.Modules.CoreModule.Creatures
+namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public class CreatureService : ILoadableService, ICoreDisposable, IRunService, IPrewarmService
     {

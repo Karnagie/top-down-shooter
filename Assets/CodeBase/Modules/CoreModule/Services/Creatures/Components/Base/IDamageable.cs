@@ -1,6 +1,4 @@
-﻿using CodeBase.Modules.CoreModule.Creatures.Components;
-
-namespace CodeBase.Modules.CoreModule.Services.Creatures.Components.Base
+﻿namespace CodeBase.Modules.CoreModule.Services.Creatures.Components.Base
 {
     public interface IDamageable : ICoreComponent
     {

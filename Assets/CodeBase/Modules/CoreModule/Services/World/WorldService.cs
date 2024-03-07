@@ -1,8 +1,9 @@
 ﻿using CodeBase.Infrastructure.Assets;
 using CodeBase.Infrastructure.Scenes;
+using CodeBase.Modules.CoreModule.Services.Camera;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Modules.CoreModule.World
+namespace CodeBase.Modules.CoreModule.Services.World
 {
     public class WorldService : ILoadableService
     {

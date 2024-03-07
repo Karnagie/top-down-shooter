@@ -1,10 +1,8 @@
 ﻿using CodeBase.Infrastructure.Services.AsyncOperations;
-using CodeBase.Modules.CoreModule.StateMachine;
 using CodeBase.Modules.InputModule;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
-namespace CodeBase.Modules.CoreModule
+namespace CodeBase.Modules.CoreModule.StateMachine
 {
     public class RunState : ICoreState
     {

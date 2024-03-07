@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Modules.CoreModule.Creatures
+﻿namespace CodeBase.Modules.CoreModule.Services.Creatures
 {
     public enum CreatureDefinition
     {

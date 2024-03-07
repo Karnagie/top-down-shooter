@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Threading.Tasks;
 using CodeBase.Infrastructure.Scenes;
 using CodeBase.Infrastructure.StateMachines.Game;
-using CodeBase.Modules.CoreModule.Creatures;
 using CodeBase.Modules.CoreModule.StateMachine;
-using CodeBase.Modules.CoreModule.World;
 using CodeBase.Modules.InputModule;
 using CodeBase.Modules.WindowsModule;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule
 {

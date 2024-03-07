@@ -2,7 +2,7 @@
 using CodeBase.Infrastructure.CommandCache.Commands;
 using CodeBase.Infrastructure.CommandCache.Commands.Args;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Modules.CoreModule.Services;
+using CodeBase.Modules.CoreModule.Services.CommandService;
 using CodeBase.Modules.MenuModule;
 using CodeBase.Modules.WindowsModule;
 using UnityEngine;

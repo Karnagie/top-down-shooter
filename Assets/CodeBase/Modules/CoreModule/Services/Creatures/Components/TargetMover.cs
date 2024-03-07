@@ -1,10 +1,9 @@
-﻿using System;
-using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
+﻿using CodeBase.Modules.CoreModule.Services.Creatures.Components.Base;
 using CodeBase.Modules.CoreModule.Services.Ticking;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Modules.CoreModule.Creatures.Components
+namespace CodeBase.Modules.CoreModule.Services.Creatures.Components
 {
     public class TargetMover : CoreComponent, ITickHandler, IEnableable
     {

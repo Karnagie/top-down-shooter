@@ -1,8 +1,8 @@
 ﻿using CodeBase.Infrastructure.CommandCache;
 using CodeBase.Infrastructure.CommandCache.Commands.Args;
-using CodeBase.Infrastructure.StateMachines.Game.States.Types;
+using CodeBase.Modules.CoreModule.StateMachine;
 
-namespace CodeBase.Modules.CoreModule.Services
+namespace CodeBase.Modules.CoreModule.Services.CommandService
 {
     public class ReplayCommand : CacheCommand<NullArgs, CoreServiceHolder>
     {

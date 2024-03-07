@@ -1,7 +1,7 @@
-﻿using CodeBase.Modules.CoreModule.Creatures;
+﻿using CodeBase.Modules.CoreModule.Services.Creatures;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Modules.CoreModule
+namespace CodeBase.Modules.CoreModule.Services.Camera
 {
     public interface ICameraService
     {

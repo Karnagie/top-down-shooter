@@ -1,6 +1,4 @@
-﻿using CodeBase.Modules.CoreModule.Creatures;
-using CodeBase.Modules.CoreModule.Creatures.Components;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.Modules.CoreModule.Services.Creatures.Components.Base
 {

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CodeBase.Infrastructure.StateMachines;
+﻿using CodeBase.Infrastructure.StateMachines;
 
 namespace CodeBase.Modules.CoreModule.StateMachine
 {

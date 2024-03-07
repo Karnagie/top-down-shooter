@@ -1,7 +1,7 @@
 ﻿using CodeBase.Infrastructure.CommandCache;
 using CodeBase.Modules.CoreModule.StateMachine;
 
-namespace CodeBase.Modules.CoreModule.Services
+namespace CodeBase.Modules.CoreModule.Services.CommandService
 {
     public class CoreServiceHolder : IServicesHolder
     {
